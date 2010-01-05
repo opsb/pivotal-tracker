@@ -1,5 +1,6 @@
 require 'builder'
 require 'cgi'
+require 'happymapper'
 
 # initial definition, to avoid circular dependencies when declaring happymappings
 class Story; end
