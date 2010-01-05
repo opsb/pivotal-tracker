@@ -1,7 +1,5 @@
-Bundler.require_env
 require 'builder'
 require 'cgi'
-
 
 # initial definition, to avoid circular dependencies when declaring happymappings
 class Story; end

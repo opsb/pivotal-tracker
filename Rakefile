@@ -1,7 +1,5 @@
-require File.join(File.dirname(__FILE__), 'vendor', 'gems', 'environment')
-Bundler.require_env
+require 'rubygems'
 require 'rake'
-require 'bundler'
 
 begin
   require 'jeweler'
@@ -11,12 +9,6 @@ begin
     gem.email = "justin.smestad@gmail.com"
     gem.homepage = "http://github.com/jsmestad/pivotal-tracker"
     gem.authors = ["Justin Smestad", "Josh Nichols", "Terence Lee"]
-    
-    manifest = Bundler::Environment.load(File.dirname(__FILE__) + '/Gemfile')
-    manifest.dependencies.each do |d|
-      next if d.only
-      gem.add_dependency(d.name, d.version)
-    end
     
   end
 
