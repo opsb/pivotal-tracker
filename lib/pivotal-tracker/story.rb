@@ -14,6 +14,7 @@ class Story
   element :labels, String
   element :description, String
   has_one :iteration, Iteration
+  has_many :notes, Note
 
   def initialize(attributes = {})
     attributes.each do |key, value|
