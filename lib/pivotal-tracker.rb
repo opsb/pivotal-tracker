@@ -1,6 +1,9 @@
 require 'builder'
 require 'cgi'
 require 'happymapper'
+require 'restclient'
+
+RestClient.proxy = ENV['http_proxy'] || ENV['HTTP_PROXY']
 
 # initial definition, to avoid circular dependencies when declaring happymappings
 class Story; end
